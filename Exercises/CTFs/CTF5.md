@@ -9,7 +9,7 @@ To complete this challenge we have to follow the initial steps and then answer t
 
 First, we use the “checksec” program like is asked. 
 
-![Alt text](/images/CTF5-1.png)
+![Alt text](/Exercises/images/CTF5-1.png)
 
 Then, to ask the questions above we analyzed the “main.c” file. 
 1.	Yes. The file “mem.txt” is opened and read by the program.
@@ -18,7 +18,7 @@ Then, to ask the questions above we analyzed the “main.c” file.
 
 After that, we conclude that if we exceed the buffers capacity we overwrite in the meme_file and we can reach the flag. 
 
-![Alt text](/images/CTF5-2.png)
+![Alt text](/Exercises/images/CTF5-2.png)
 
 ## Challenge 2
 
@@ -29,15 +29,15 @@ To complete this challenge we have to follow the initial steps and then answer t
 
 First, we use again the “checksec” program like is asked. 
 
-![Alt text](/images/CTF5-3.png)
+![Alt text](/Exercises/images/CTF5-3.png)
 
 Like we did before, we started to analyze the “main.c” file. 
 
 We tried to run the “nc ctf-fsi.fe.up.pt 4000” and used the “mem.txt” file to find the flag but  no result with that. 
 
-![Alt text](/images/CTF5-4.png)
+![Alt text](/Exercises/images/CTF5-4.png)
 
 Them, we changed the “val” number to “0xfefc2324” in the main file and in the python program given in the challenge 1 we injected content to write 32 characters (in “r.sendline(…)”) followed by the new value of “val” and the name file that we wanted to read.  
 After that, we executed again and found the flag. 
 
-![Alt text](/images/CTF5-5.png)
+![Alt text](/Exercises/images/CTF5-5.png)
