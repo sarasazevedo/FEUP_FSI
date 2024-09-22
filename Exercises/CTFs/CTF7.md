@@ -4,7 +4,7 @@
 
 We started by running the `checksec --file=program` in order to obtain more information about the program's protections. 
 
-![Alt text](/images/CTF7-1.png)
+![Alt text](/Exercises/images/CTF7-1.png)
 
 After analysing the source code, we can answer the following questions:
 
@@ -29,23 +29,23 @@ $ p load_flag #
 
 The result was the return address "0x08049256", which is "\x60\xC0\x04\x08" in string format.
 
-![Alt text](/images/CTF7-2.png)
+![Alt text](/Exercises/images/CTF7-2.png)
 
 Then, we need to put the value of this register in the our "exploit_example.py". Since it is an integer, the execution stack reads it differently when compared to an array, as we concluded in the task of the previous week. So, we inverted the order of the bytes of the register 0x8049256 and inserted the register "\x60\xC0\x04\x08". Besides that, we needed to concatenate it to "-%s", so that we could read the content of the register itself. We executed the exploit file in local mode and we could access the content of "flag.txt".
 
-![Alt text](/images/CTF7-3.png)
+![Alt text](/Exercises/images/CTF7-3.png)
 
-![Alt text](/images/CTF7-4.png)
+![Alt text](/Exercises/images/CTF7-4.png)
 
 This means we exploited the program successfully. So, we tried in the remote mode, by asserting the `LOCAL` variable as False and we obtained the flag value sucessfully.
 
-![Alt text](/images/CTF7-5.png)
+![Alt text](/Exercises/images/CTF7-5.png)
 
 ## Challenge 2
 
 We used checksec and we found the same restrictions from the first challenge.
 
-![Alt text](/images/CTF7-Challenge2-1.png)
+![Alt text](/Exercises/images/CTF7-Challenge2-1.png)
 
 After analysing the source code, we can answer the following questions:
 
@@ -68,12 +68,12 @@ $ p &key
 
 The result was the return address 0x804b324 which is "\x08\x04\xB3\x24" in format string. 
 
-![Alt text](/images/CTF7-Challenge2-2.png)
+![Alt text](/Exercises/images/CTF7-Challenge2-2.png)
 
 We know how to write our string: but first, we have to calculate A. To do this we know 0xBEEF=48879. We also know that we have written 8 chars so far for our address, that left us with 48879-8=48871. This is the number we got to substitute 'A' with this value.
 
 Now we run the exploit_example.py we got from the previous challenge and we can get the flag in the flag.txt:
 
-![Alt text](/images/CTF7-Challenge2-3.png)
+![Alt text](/Exercises/images/CTF7-Challenge2-3.png)
 
-![Alt text](/images/CTF7-Challenge2-4.png)
+![Alt text](/Exercises/images/CTF7-Challenge2-4.png)
