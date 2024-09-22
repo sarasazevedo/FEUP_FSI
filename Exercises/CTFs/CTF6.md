@@ -42,4 +42,4 @@ Now, we just needed to refresh the page to obtain the flag:
 
 ![Alt text](/Exercises/images/CTF6-5.png)
 
-![Alt text](/images/CTF6-6.png)
+![Alt text](/Exercises/images/CTF6-6.png)
