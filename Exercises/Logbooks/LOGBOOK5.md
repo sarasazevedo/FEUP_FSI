@@ -4,7 +4,7 @@
 
 First, we turn off some of the operating system's protections using the commands that are given (sudo sysctl -w kernel.randomize_va_space=0 and sudo ln -sf /bin/zsh /bin/sh). 
 
-![Alt text](images/1.png)
+![Alt text](/Exercises/images/1.png)
 
 ## Task 1 
 
@@ -16,9 +16,9 @@ In 3.3 is just to understand how the 64-bit shell works.
 
 In 3.4 we went to the past shellcode and compiled the file with help of the Makefile already given and then execute the a32.out and the a64.out. 
 
-![Alt text](images/2.png)
+![Alt text](/Exercises/images/2.png)
 
-![Alt text](images/3.png)
+![Alt text](/Exercises/images/3.png)
 
 We conclude that both files generate a shellcode. 
 
@@ -26,7 +26,7 @@ We conclude that both files generate a shellcode.
 
 In this task we compiled the program with the commands given. 
 
-![Alt text](images/4.png)
+![Alt text](/Exercises/images/4.png)
 
 After analyzing the code, we noticed the attempt to copy a char array with a maximum size of 517 bytes into a buffer with a maximum size of 100 bytes so overflow will occur because the function strcpy doesn’t check the limits of the buffer.   
 
@@ -40,31 +40,31 @@ $ gdb stack-L1-dbg # Run the program in debug mode
 
 gdb-peda$ b bof # Set a breakpoint in the bof function
 
-![Alt text](/images/Logbook5-1.png)
+![Alt text](/Exercises/images/Logbook5-1.png)
 
 gdb-peda$ run # Start executing the file
 
-![Alt text](/images/Logbook5-2.png)
+![Alt text](/Exercises/images/Logbook5-2.png)
 
-![Alt text](/images/Logbook5-3.png)
+![Alt text](/Exercises/images/Logbook5-3.png)
 
 gdb-peda$ next # See the note below
 
-![Alt text](/images/Logbook5-4.png)
+![Alt text](/Exercises/images/Logbook5-4.png)
 
-![Alt text](/images/Logbook5-5.png)
+![Alt text](/Exercises/images/Logbook5-5.png)
 
 gdb-peda$ p $ebp # Get the ebp value 
 
 $1 = (void *) 0xffffdfd8
 
-![Alt text](/images/Logbook5-6.png)
+![Alt text](/Exercises/images/Logbook5-6.png)
 
 gdb-peda$ p &buffer # Get the buffer’s address 
 
 $2 = (char (*)[100]) 0xffffdfac
 
-![Alt text](/images/Logbook5-7.png)
+![Alt text](/Exercises/images/Logbook5-7.png)
 
 In 5.2: 
 
@@ -106,4 +106,4 @@ with open('badfile', 'wb') as f:
 
 To test this we open terminal where exploit.py and stack_l1 is located and run the exploit.py file and then the stack-L1. We got access to the rootshell as you can see in the print below, so we know it worked properly.
 
-![Alt text](/images/Logbook5-8.png)
+![Alt text](/Exercises/images/Logbook5-8.png)
