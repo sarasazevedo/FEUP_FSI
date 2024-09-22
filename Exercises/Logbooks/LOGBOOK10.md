@@ -102,9 +102,9 @@ z -> X
 
 Thus, the file was decrypted with the command `tr 'qdvmkxblfwicegryjsohtpz' 'QUEOMSLVARTJINGDCPHBFXZ' < cipher.txt > out.txt`:
 
-![Alt text](/images/Logbook10-1.png)
+![Alt text](/Exercises/images/Logbook10-1.png)
 
-![Alt text](/images/Logbook10-2.png)
+![Alt text](/Exercises/images/Logbook10-2.png)
 
 ## Task 2
 
@@ -136,4 +136,4 @@ cat header body > newimg.bmp
 
 The resulting image was:
 
-![Alt text](/images/Logbook10-3.png)
+![Alt text](/Exercises/images/Logbook10-3.png)
