@@ -80,7 +80,7 @@ int main() {
 
 The server output was:
 
-![Alt text](/images/Logbook7-1.png)
+![Alt text](/Exercises/images/Logbook7-1.png)
 
 We concluded that the message at the address is `"A secret message"`.
 
@@ -107,7 +107,7 @@ int main() {
 
 The server output was:
 
-![Alt text](/images/Logbook7-2.png)
+![Alt text](/Exercises/images/Logbook7-2.png)
 
 ### Task 3.B
 
@@ -127,7 +127,7 @@ int main() {
 
 It resulted in the following output on the server:
 
-![Alt text](/images/Logbook7-3.png)
-![Alt text](/images/Logbook7-4.png)
+![Alt text](/Exercises/images/Logbook7-3.png)
+![Alt text](/Exercises/images/Logbook7-4.png)
 
 As observed, the value of `target` is now 0x00005000.
