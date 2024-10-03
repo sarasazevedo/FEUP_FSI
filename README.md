@@ -1,6 +1,6 @@
 # Computer Security Foundations
 
-Exercises of the UC Computer Security Foundations.
+Exercises of the UC.
 
 Done by:
 - Alaa Al-Taher 
